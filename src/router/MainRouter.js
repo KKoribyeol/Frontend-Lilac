@@ -8,6 +8,7 @@ const MainRouter = () => {
         <Router>
             <Route exact path="/" component={MainContainer} />
             <Route exact path="/signup" component={SignupContainer} />
+            <Route exact path="/signin" component={SignupContainer} />
         </Router>
     );
 }
