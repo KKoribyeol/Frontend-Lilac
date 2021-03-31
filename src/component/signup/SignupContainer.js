@@ -1,7 +1,7 @@
 import Header from "../common/header/Header";
-import Signup from "./Signup";
+import Signup from "./SignUp";
 
-const SignupContainer = () => {
+const SignUpContainer = () => {
     return (
         <>
             <Header />
@@ -10,4 +10,4 @@ const SignupContainer = () => {
     )
 }
 
-export default SignupContainer
+export default SignUpContainer

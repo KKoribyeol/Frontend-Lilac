@@ -7,7 +7,7 @@ const Header = () => {
         <div className="header">
             <div className="header-left sort-center">
                 <Link to="/" className="main-link sort-center">
-                    <div className="main-logo"></div>
+                    <div className="main-logo"/>
                     <span className="main-project-name sort-center">꼬리별</span>
                 </Link>
             </div>

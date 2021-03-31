@@ -1,0 +1,94 @@
+.sign-in-wrapper {
+    width: 100%;
+    height: calc(100% - 62px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign-in-logo {
+    margin-top: 169px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #000000;
+    border-radius: 50%;
+
+    background: url("../../static/image/MainLogo.png") 48px 48px / 100%;
+}
+
+.sign-in-to-project {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sign-in-form {
+    width: 308px;
+    height: 228px;
+    background-color: #F6F8FA;
+    border: 1px solid #EAECEF;
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+}
+
+.sign-in-input-description {
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-top: 23px;
+    margin-left: 16px;
+}
+
+.sign-in-input-box {
+    width: 266px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #EAECEF;
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+.sign-in-submit-button {
+    width: 266px;
+    height: 32px;
+    margin-top: 16px;
+    margin-left: 16px;
+    background-color: #2EA44F;
+    border: 1px solid #2B9148;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.go-sign-up {
+    width: 308px;
+    height: 56px;
+    background-color: #FFFFFF;
+    border: 1px solid #EAECEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 17px;
+}
+
+.new-to-project {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.create-an-account {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4384D9;
+}
+
+.github {
+    font-size: 12px;
+    font-weight: bold;
+    color: #4384D9;
+    margin-top: 32px;
+}
