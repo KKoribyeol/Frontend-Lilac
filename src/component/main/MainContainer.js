@@ -1,5 +1,5 @@
 import Main from "./Main";
-import Header from "./Header";
+import Header from "../common/header/Header";
 
 const MainContainer = () => {
     return (
