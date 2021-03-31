@@ -21,7 +21,7 @@
     border: 1px solid #000000;
     border-radius: 50%;
 
-    background: url("./static/image/MainLogo.png") 32px 32px / 100%;
+    background: url("../../../static/image/MainLogo.png") 32px 32px / 100%;
 }
 
 .main-project-name {
@@ -56,4 +56,9 @@
     color: #FFFFFF;
     font-size: 20px;
     font-weight: bold;
+}
+
+.sort-center {
+    display: flex;
+    align-items: center;
 }
