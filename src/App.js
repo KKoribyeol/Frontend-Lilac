@@ -1,5 +1,5 @@
-import React from 'react';
-import MainRouter from "./MainRouter";
+import React from "react";
+import MainRouter from "./router/MainRouter";
 
 const App = () => {
     return (
