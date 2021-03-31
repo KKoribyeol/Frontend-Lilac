@@ -15,7 +15,9 @@ const Header = () => {
 
             </div>
             <div className="header-right sort-center">
-                <span className="sign-in">Sign in</span>
+                <Link to="/signin">
+                    <span className="sign-in">Sign in</span>
+                </Link>
                 <Link to="/signup">
                     <span className="sign-up">Sign up</span>
                 </Link>
