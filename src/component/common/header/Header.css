@@ -1,0 +1,64 @@
+.header {
+    font-family: default-font;
+    width: 100%;
+    height: 62px;
+    background-color: #161B22;
+}
+
+.header-left {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.main-logo {
+    float: left;
+    margin-left: 48px;
+
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #000000;
+    border-radius: 50%;
+
+    background: url("../../../static/image/MainLogo.png") 32px 32px / 100%;
+}
+
+.main-project-name {
+    margin-left: 19px;
+
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-middle {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.header-right {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.sign-in {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 900;
+
+    margin-right: 26px;
+}
+
+.sign-up {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sort-center {
+    display: flex;
+    align-items: center;
+}
