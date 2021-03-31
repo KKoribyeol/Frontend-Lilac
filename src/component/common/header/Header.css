@@ -62,3 +62,10 @@
     display: flex;
     align-items: center;
 }
+
+.header-navigation {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: 47px;
+}

@@ -4,7 +4,7 @@ import Signup from "./SignUp";
 const SignUpContainer = () => {
     return (
         <>
-            <Header />
+            <Header isLoginBefore={true}/>
             <Signup />
         </>
     )
