@@ -1,6 +1,6 @@
 @font-face {
     font-family: default-font;
-    src: url('./static/font/NanumSquareB.ttf');
+    src: url('../../static/font/NanumSquareB.ttf');
 }
 
 html, body, div, span, applet, object, iframe,
@@ -24,6 +24,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 
     font-family: default-font;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
