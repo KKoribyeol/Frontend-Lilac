@@ -1,0 +1,23 @@
+.project-box {
+    width: 80%;
+    height: 28px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: 12px;
+}
+
+.project-image {
+    width: 16px;
+    height: 16px;
+    background: url("../../../../static/image/ProjectLogoBlack.png") 16px 16px / 100%;
+}
+
+.project-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 15px;
+}

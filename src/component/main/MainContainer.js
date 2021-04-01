@@ -4,7 +4,7 @@ import Header from "../common/header/Header";
 const MainContainer = () => {
     return (
         <>
-            <Header />
+            <Header isLoginBefore={true}/>
             <Main />
         </>
     );

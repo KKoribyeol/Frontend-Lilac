@@ -77,3 +77,9 @@
     color: #FFFFFF;
     font-weight: bold;
 }
+
+.problem-message {
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+}
