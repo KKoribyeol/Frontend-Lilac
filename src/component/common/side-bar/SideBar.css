@@ -1,0 +1,77 @@
+.side-bar {
+    width: 387px;
+    height: calc(100% - 62px);
+    float: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid #707070;
+}
+
+.name-box {
+    width: 80%;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    border-bottom: 1px solid #707070;
+}
+
+.profile {
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid #000000;
+    border-radius: 50%;
+
+    background: url("../../../static/image/MainLogo.png") 25px 25px / 100%;
+
+    margin-left: 15px;
+}
+
+.nickname {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 9px;
+    color: #000000;
+}
+
+.project-new-wrapper {
+    width: 80%;
+    height: 28px;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.projects {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.new-project {
+    width: 70px;
+    height: 28px;
+    background-color: #2EA44F;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 164px;
+}
+
+.new-project-image {
+    width: 16px;
+    height: 16px;
+    background: url("../../../static/image/ProjectLogo.png") 16px 16px / 100%;
+}
+
+.new-project-description {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
