@@ -92,3 +92,10 @@
     color: #4384D9;
     margin-top: 32px;
 }
+
+.problem-message {
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+    margin-left: 16px;
+}
