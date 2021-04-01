@@ -29,6 +29,7 @@ const Header = ({isLoginBefore}) => {
                     :
                     <>
                         <div className="header-middle sort-center">
+                            <Navigation link="/project" navigationName="Project"/>
                             <Navigation link="/target" navigationName="Target"/>
                             <Navigation link="/group" navigationName="Group"/>
                             <Navigation link="/template" navigationName="Template"/>

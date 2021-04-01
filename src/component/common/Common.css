@@ -54,3 +54,34 @@ html, body{
     width: 100%;
     height: 100%;
 }
+
+.feature-background {
+    width: calc(100% - 388px);
+    height: calc(100% - 62px);
+    background-color: #F6F8FA;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-title-wrapper {
+    width: 100%;
+    height: 123px;
+}
+
+.feature-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #000000;
+    margin: 100px 0px 0px 126px;
+    line-height: 180px;
+}
+
+.feature-body {
+    width: 1270px;
+    height: 620px;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E4E8;
+    margin-left: 126px;
+    margin-top: 20px;
+}

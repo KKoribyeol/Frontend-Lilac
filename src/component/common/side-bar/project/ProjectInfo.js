@@ -1,8 +1,8 @@
 import React from 'react';
-import "./Project.css"
+import "./ProjectInfo.css"
 import "../../Common.css"
 
-const Project = ({projectName}) => {
+const ProjectInfo = ({projectName}) => {
     return (
         <div className="project-box">
             <div className="project-image"/>
@@ -11,4 +11,4 @@ const Project = ({projectName}) => {
     );
 };
 
-export default Project;
+export default ProjectInfo;
