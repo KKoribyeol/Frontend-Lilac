@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../common/Common.css";
 import "./SignupForm.css";
 
-const SignupForm = ({name, description, inputName}) => {
+const SignupForm = ({ valueHandler, value, name, description }) => {
     return (
         <div>
             <span className="box-name">{name}</span>
             <span className="box-description">{description}</span>
-            <input type="text" name={inputName} className="box-form" />
+            <input
+                type="text"
+                onChange={valueHandler}
+                value={value}
+                className="box-form"
+            />
         </div>
     );
 }
