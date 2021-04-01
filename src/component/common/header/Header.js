@@ -35,6 +35,8 @@ const Header = ({isLoginBefore}) => {
                             <Navigation link="/document" navigationName="API Document"/>
                         </div>
                         <div className="header-right sort-center">
+                            <div className="profile-image"/>
+                            <span className="my-page">My Page</span>
                         </div>
                     </>
             }
