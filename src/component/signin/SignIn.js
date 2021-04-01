@@ -9,6 +9,7 @@ const SignIn = () => {
 
     const [ id, setId ] = useState("");
     const [ password, setPassword ] = useState("");
+    const [ problemMessage, setProblemMessage ] = useState("")
 
     const handleId = event => setId(event.currentTarget.value);
     const handlePassword = event => setPassword(event.currentTarget.value);
@@ -19,10 +20,19 @@ const SignIn = () => {
         axios.post("/account/login", {
             accountId: id,
             accountPassword: password,
-        }).then(() => {
-            history.push("/target")
-        }).catch(event => {
-            
+        }).then(event => {
+            const [ accessToken, refreshToken ] = event.data;
+            // 토큰을 저장하는 기능 추가
+            history.push("/target");
+        }).catch(error => {
+            switch (error.response.status) {
+                case 400 || 404:
+                    setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
+                    break;
+                default:
+                    setProblemMessage("500 500 500 500 500 500 500 500 500 500");
+                    break;
+            }
         })
     }
 
