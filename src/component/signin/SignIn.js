@@ -9,6 +9,7 @@ const SignIn = () => {
 
     const [ id, setId ] = useState("");
     const [ password, setPassword ] = useState("");
+    const [ problemMessage, setProblemMessage ] = useState("")
 
     const handleId = event => setId(event.currentTarget.value);
     const handlePassword = event => setPassword(event.currentTarget.value);
@@ -16,13 +17,23 @@ const SignIn = () => {
     const submit = event => {
         event.preventDefault();
 
-        axios.post("/account/login", {
+        axios.post("http://localhost:6180/account/login", {
             accountId: id,
             accountPassword: password,
-        }).then(() => {
-            history.push("/target")
-        }).catch(event => {
-            
+        }).then(event => {
+            const { accessToken, refreshToken } = event.data;
+            // 토큰 처리하는 로직
+            history.push("/project");
+        }).catch(error => {
+            switch (error.response.status) {
+                case 400:
+                case 404:
+                    setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
+                    break;
+                default:
+                    setProblemMessage(error.response.message);
+                    break;
+            }
         })
     }
 
@@ -45,6 +56,7 @@ const SignIn = () => {
                     value={password}
                     className="sign-in-input-box"
                 />
+                <span className="problem-message">{problemMessage}</span>
                 <input type="submit" value="Sign in" className="sign-in-submit-button"/>
             </form>
             <div className="go-sign-up">

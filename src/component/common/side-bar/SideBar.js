@@ -1,7 +1,7 @@
 import React from 'react';
 import "./SideBar.css"
 import "../Common.css"
-import Project from "./project/Project";
+import Project from "./project/ProjectInfo";
 
 const SideBar = () => {
     return (
@@ -12,10 +12,6 @@ const SideBar = () => {
             </div>
             <div className="project-new-wrapper">
                 <span className="projects">Projects</span>
-                <div className="new-project">
-                    <div className="new-project-image"/>
-                    <span className="new-project-description">New</span>
-                </div>
             </div>
 
             <Project projectName="Kkoribyeol"/>

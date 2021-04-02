@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../../common/Common.css";
 import "./SignupForm.css";
 
