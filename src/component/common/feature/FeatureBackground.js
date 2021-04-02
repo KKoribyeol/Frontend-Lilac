@@ -3,13 +3,16 @@ import "../Common.css"
 import FeatureTitle from "./FeatureTitle";
 import FeatureBody from "./FeatureBody";
 
-const FeatureBackground = ({ title, FeatureHeaderName }) => {
+const FeatureBackground = ({ title, FeatureHeader, FeatureContentProvider }) => {
     return (
         <div className="feature-background">
             <FeatureTitle title={title}/>
-            <FeatureBody FeatureHeaderName={FeatureHeaderName} />
+            <FeatureBody
+                FeatureHeader={FeatureHeader}
+                FeatureContentProvider={FeatureContentProvider}
+            />
         </div>
     );
-};
+}
 
 export default FeatureBackground;

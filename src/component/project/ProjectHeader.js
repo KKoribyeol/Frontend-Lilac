@@ -5,6 +5,9 @@ import "../common/Common.css"
 const ProjectHeader = () => {
     return (
         <div className="feature-body-header">
+            <div className="project-header-code-wrapper feature-header-wrapper">
+                <span className="feature-header-font">Code</span>
+            </div>
             <div className="project-header-name-wrapper feature-header-wrapper">
                 <span className="feature-header-font">Name</span>
             </div>

@@ -7,7 +7,7 @@ const SignupForm = ({ valueHandler, value, name, description }) => {
             <span className="box-name">{name}</span>
             <span className="box-description">{description}</span>
             <input
-                type="text"
+                type="password"
                 onChange={valueHandler}
                 value={value}
                 className="box-form"

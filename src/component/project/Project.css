@@ -1,9 +1,110 @@
-.project-header-name-wrapper {
+.project-header-code-wrapper {
     width: 60px;
     margin-left: 56px;
 }
 
+.project-header-name-wrapper {
+    width: 60px;
+    margin-left: 250px;
+}
+
 .project-header-description-wrapper {
     width: 90px;
-    margin-left: 456px;
+    margin-left: 250px;
+}
+
+.content-wrapper-wrapper {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.content-wrapper {
+    width: 85%;
+    height: 36px;
+    margin-left: 50px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #E1E4E8;
+}
+
+.project-content-code-wrapper {
+    width: 310px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #707070;
+}
+
+.project-content-name-wrapper {
+    width: 310px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #707070;
+}
+
+.project-content-description-wrapper {
+    width: 440px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #707070;
+}
+
+.project-content {
+    font-size: 12px;
+    font-weight: bold;
+    color: #B1B0B0;
+    margin-left: 18px;
+}
+
+.project-modification-image {
+    width: 15px;
+    height: 15px;
+    background: url("../../static/image/FeatureModification.png") 15px 15px / 100%;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.project-modification-image:hover {
+    cursor: pointer;
+}
+
+.project-deletion-image {
+    width: 15px;
+    height: 15px;
+    background: url("../../static/image/GarbageTong.png") 15px 15px / 100%;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.project-deletion-image:hover {
+    cursor: pointer;
+}
+
+.project-input-tag {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-left: 18px;
+    color: #000000;
+}
+
+.project-insertion-image {
+    width: 15px;
+    height: 15px;
+    background: url("../../static/image/InsertionLogo.png") 15px 15px / 100%;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.project-insertion-image:hover {
+    cursor: pointer;
+}
+
+.project-void {
+    margin-left: 317px;
 }

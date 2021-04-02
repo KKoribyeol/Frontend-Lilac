@@ -91,8 +91,8 @@ html, body{
     height: 36px;
     border-bottom: 1px solid #E1E4E8;
     display: flex;
-    display: flex;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .feature-body-body {
@@ -112,4 +112,27 @@ html, body{
     justify-content: center;
     align-items: center;
     border-left: 2px solid #707070;
+}
+
+.feature-new-box {
+    width: 70px;
+    height: 25px;
+    background-color: #2EA44F;
+    float: right;
+    margin: 116px 138px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-new {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.tu-myeong {
+    font-size: 10px;
+    font-weight: bold;
+    color: #2EA44F;
 }
