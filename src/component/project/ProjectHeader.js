@@ -1,6 +1,6 @@
 import React from 'react';
-import "./ProjectHeader.css"
-import "../../Common.css"
+import "./Project.css"
+import "../common/Common.css"
 
 const ProjectHeader = () => {
     return (
