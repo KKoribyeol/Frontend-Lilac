@@ -1,15 +1,13 @@
 import React from 'react';
-import "../Common.css"
+import "../Common.css";
 
-const FeatureBody = ({ FeatureHeaderName }) => {
+const FeatureBody = ({ FeatureHeader, FeatureContentProvider }) => {
     return (
         <div className="feature-body">
-            <FeatureHeaderName/>
-            <div className="feature-body-body">
-
-            </div>
+            <FeatureHeader/>
+            <FeatureContentProvider/>
         </div>
     );
-};
+}
 
 export default FeatureBody;

@@ -52,10 +52,18 @@
     margin-right: 26px;
 }
 
+.sign-in:hover {
+    cursor: pointer;
+}
+
 .sign-up {
     color: #FFFFFF;
     font-size: 20px;
     font-weight: bold;
+}
+
+.sign-up:hover {
+    cursor: pointer;
 }
 
 .sort-center {
@@ -64,10 +72,14 @@
 }
 
 .header-navigation {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
     color: #FFFFFF;
-    margin-left: 47px;
+    margin-left: 30px;
+}
+
+.header-navigation:hover {
+    cursor: pointer;
 }
 
 .profile-image {
