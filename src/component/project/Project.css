@@ -108,3 +108,15 @@
 .project-void {
     margin-left: 317px;
 }
+
+.project-cancel-image {
+    width: 15px;
+    height: 15px;
+    background: url("../../static/image/CancelLogo.png") 15px 15px / 100%;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.project-cancel-image:hover {
+    cursor: pointer;
+}
