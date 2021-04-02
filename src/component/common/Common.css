@@ -136,3 +136,9 @@ html, body{
     font-weight: bold;
     color: #2EA44F;
 }
+
+.gong-back {
+    width: 309px;
+    height: 28px;
+    margin-bottom: 10px;
+}
