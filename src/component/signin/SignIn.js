@@ -21,12 +21,19 @@ const SignIn = () => {
             accountId: id,
             accountPassword: password,
         }).then(event => {
+            console.log('여기 들어옴')
             const { accessToken, refreshToken } = event.data;
-            // 토큰 처리하는 로직
+
+            localStorage.setItem("accessToken", accessToken);
+            localStorage.setItem("refreshToken", refreshToken);
+
             history.push("/project");
         }).catch(error => {
+            console.log(error)
             switch (error.response.status) {
                 case 400:
+                    setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
+                    break;
                 case 404:
                     setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
                     break;
@@ -51,7 +58,7 @@ const SignIn = () => {
                 />
                 <span className="sign-in-input-description">Password</span>
                 <input
-                    type="text"
+                    type="password"
                     onChange={handlePassword}
                     value={password}
                     className="sign-in-input-box"
