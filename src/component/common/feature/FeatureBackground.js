@@ -1,13 +1,13 @@
 import React from 'react';
-import FeatureTitle from "./FeatureTitle";
 import "../Common.css"
+import FeatureTitle from "./FeatureTitle";
 import FeatureBody from "./FeatureBody";
 
-const FeatureBackground = ({ title }) => {
+const FeatureBackground = ({ title, FeatureHeaderName }) => {
     return (
         <div className="feature-background">
-            <FeatureTitle title="Project"/>
-            <FeatureBody />
+            <FeatureTitle title={title}/>
+            <FeatureBody FeatureHeaderName={FeatureHeaderName} />
         </div>
     );
 };
