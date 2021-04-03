@@ -5,8 +5,6 @@ import ProjectHeader from "./ProjectHeader";
 import ProjectContentProvider from "./ProjectContentProvider";
 
 const Project = () => {
-
-
     return (
         <>
             <FeatureBackground

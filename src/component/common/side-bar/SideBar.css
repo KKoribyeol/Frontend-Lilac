@@ -88,7 +88,11 @@
     font-weight: bold;
     color: #D73A49;
     float: right;
-    margin-left: 250px;
+    margin-right: 20px;
+}
+
+.logout-button:hover {
+    cursor: pointer;
 }
 
 .side-bar-bottom {
@@ -98,4 +102,12 @@
     bottom: 0;
     display: flex;
     align-items: center;
+}
+
+.current-project-name-wrapper {
+    width: 50%;
+}
+
+.logout-button-wrapper {
+    width: 50%;
 }

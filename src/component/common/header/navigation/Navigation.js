@@ -1,12 +1,21 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-const Navigation = ({ link, navigationName }) => {
+const Navigation = ({ link, navigationName, isProject = false }) => {
+    const history = useHistory()
+
+    const checkProjectCode = () => {
+        if (!isProject && localStorage.getItem("projectCode") == null) {
+            alert("프로젝트를 선택해주세요.");
+            window.location.reload()
+        } else {
+            history.push(link);
+        }
+    }
+
     return (
         <>
-            <Link to={link}>
-                <span className="header-navigation">{navigationName}</span>
-            </Link>
+            <span className="header-navigation" onClick={checkProjectCode}>{navigationName}</span>
         </>
     );
 };

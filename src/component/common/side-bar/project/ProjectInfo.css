@@ -9,6 +9,10 @@
     margin-top: 12px;
 }
 
+.project-box:hover {
+    cursor: pointer;
+}
+
 .project-image {
     width: 16px;
     height: 16px;
