@@ -1,10 +1,11 @@
 import axios from "axios";
 
-export const getProject = async () => {
+export const getTarget = async () => {
     try {
-        return await axios.get("http://localhost:6180/project", {
+        return await axios.get("http://localhost:6180/target", {
             headers: {
                 Authorization: localStorage.getItem("accessToken"),
+                projectCode: "projectCode-finally",
             },
         })
     } catch (error) {

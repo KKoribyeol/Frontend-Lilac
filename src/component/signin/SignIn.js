@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import "./SignIn.css";
 import "../common/Common.css";
 import axios from "axios";
+import { getAccountName } from "./getAccountName";
+import {getProject} from "../project/getProject";
 
 const SignIn = () => {
     const history = useHistory();
@@ -21,11 +23,15 @@ const SignIn = () => {
             accountId: id,
             accountPassword: password,
         }).then(event => {
-            console.log('여기 들어옴')
             const { accessToken, refreshToken } = event.data;
 
             localStorage.setItem("accessToken", accessToken);
             localStorage.setItem("refreshToken", refreshToken);
+
+            getAccountName(accessToken).then(result => {
+                console.log(result.data.name)
+                localStorage.setItem("accountName", result.data.name);
+            })
 
             history.push("/project");
         }).catch(error => {

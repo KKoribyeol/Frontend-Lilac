@@ -8,15 +8,18 @@ import { useHistory } from "react-router-dom";
 const SideBar = () => {
     const history = useHistory();
 
-    const [ projectName, setProjectName ] = useState({
-        projectNames: [],
+    const [ project, setProject ] = useState({
+        projects: [],
     });
-    const [ currentProjectName, setCurrentProjectName ] = useState("");
 
     useEffect(() => {
         getProject().then(result => {
-            setProjectName(prev =>
-                ({ ...prev, projectNames: prev.projectNames.concat(result.data.projects.map(p => p.name))})
+            setProject(prev =>
+                ({
+                    projects: prev.projects.concat(
+                        result.data.projects.map(p => p.code)
+                    )
+                })
             )
         })
     }, []);
@@ -30,19 +33,27 @@ const SideBar = () => {
         <div className="side-bar">
             <div className="name-box">
                 <div className="profile"/>
-                <span className="nickname">Nickname</span>
+                <span className="nickname">{localStorage.getItem("accountName")}</span>
             </div>
             <div className="project-new-wrapper">
                 <span className="projects">Projects</span>
             </div>
 
             {
-                projectName.projectNames.map(projectName => (<ProjectInfo projectName={projectName}/> ))
+                project.projects.map(code => (
+                    <div className="gong-back">
+                        <ProjectInfo projectCode={code}/>
+                    </div>)
+                )
             }
 
             <div className="side-bar-bottom">
-                <span className="current-project-name">dfsdf</span>
-                <span className="logout-button" onClick={logout}>Logout</span>
+                <div className="current-project-name-wrapper">
+                    <span className="current-project-name">{localStorage.getItem("projectCode")}</span>
+                </div>
+                <div className="logout-button-wrapper">
+                    <span className="logout-button" onClick={logout}>Logout</span>
+                </div>
             </div>
         </div>
     );
