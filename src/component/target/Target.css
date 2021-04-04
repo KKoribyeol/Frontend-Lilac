@@ -12,3 +12,44 @@
     width: 90px;
     margin-left: 300px;
 }
+
+.target-content-token-wrapper {
+    width: 360px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #707070;
+}
+
+.target-content-nickname-wrapper {
+    width: 380px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #707070;
+}
+
+.target-content-name-wrapper {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #707070;
+}
+
+.target-void {
+    margin-left: 5px;
+}
+
+.target-input-tag {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-left: 18px;
+    color: #000000;
+}
+
+.target-content {
+    font-size: 12px;
+    font-weight: bold;
+    color: #B1B0B0;
+    margin-left: 18px;
+}

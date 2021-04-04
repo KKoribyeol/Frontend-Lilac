@@ -29,7 +29,6 @@ const SignIn = () => {
             localStorage.setItem("refreshToken", refreshToken);
 
             getAccountName(accessToken).then(result => {
-                console.log(result.data.name)
                 localStorage.setItem("accountName", result.data.name);
             })
 

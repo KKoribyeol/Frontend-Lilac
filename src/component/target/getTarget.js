@@ -6,7 +6,7 @@ export const getTarget = async () => {
         return await axios.get(config.BASE_URL + "/target", {
             headers: {
                 Authorization: localStorage.getItem("accessToken"),
-                projectCode: "projectCode-finally",
+                projectCode: localStorage.getItem("projectCode"),
             },
         })
     } catch (error) {
