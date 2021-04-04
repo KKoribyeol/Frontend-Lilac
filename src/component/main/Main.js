@@ -1,7 +1,8 @@
-import "../common/Common.css"
+import "../common/Common.css";
 import "./Main.css";
 
 const Main = () => {
+
     return (
         <div className='hello-world'>
             Hello, world!
