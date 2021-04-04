@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import "./SignUp.css"
-import SignupForm from "./signup-form/SignupForm"
+import "./SignUp.css";
+import SignupForm from "./signup-form/SignupForm";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import * as config from "../../config";
+
 const SignUp = () => {
     const history = useHistory();
 
@@ -20,7 +22,7 @@ const SignUp = () => {
     const submit = event => {
         event.preventDefault();
 
-        axios.post('http://localhost:6180/account', {
+        axios.post(config.BASE_URL + '/account', {
             accountId: id,
             accountPassword: password,
             accountName: name,
@@ -38,7 +40,7 @@ const SignUp = () => {
                     setProblemMessage("JSON 이 잘못되었습니다. 이거 뜨면 안 됨.");
                     break;
                 default:
-                    setProblemMessage("500 500 500 500 500 500 500 500 500 500");
+                    setProblemMessage(error.response.data.message);
                     break;
             }
         })
@@ -77,7 +79,7 @@ const SignUp = () => {
 
                     <div className="file-uploader-form">
                         <span className="box-name">Profile</span>
-                        <input type="file" className="file-uploader" />
+                        <input type="file" className="file-uploader"/>
                     </div>
 
                     <span className="problem-message">{problemMessage}</span>
