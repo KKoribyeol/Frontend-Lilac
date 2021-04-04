@@ -1,4 +1,4 @@
-# 꼬리별 [KKo-Ri-Byeol]
+# 꼬리별 [KKoribyeol]
 ## 프론트엔드 (Lilac)
 ![라일락](https://user-images.githubusercontent.com/48639421/113157641-0a356600-9276-11eb-8ed6-db79265b296c.jpg)  
 푸시 서비스가 필요해서 사용해본 NHN Cloud의 TOAST 푸시 서비스,  
