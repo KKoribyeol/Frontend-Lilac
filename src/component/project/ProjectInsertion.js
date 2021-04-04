@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./Project.css"
 import axios from "axios";
+import * as config from "../../config";
 
 const ProjectInsertion = () => {
     const [ name, setName ] = useState("");
@@ -11,7 +12,7 @@ const ProjectInsertion = () => {
     const handleDescription = description => setDescription(description.currentTarget.value);
 
     const submit = () => {
-        axios.post("http://localhost:6180/project", {
+        axios.post(config.BASE_URL + "/project", {
             name: name,
             description: description,
         }, {
