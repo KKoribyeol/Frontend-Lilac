@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./Project.css"
 import axios from "axios";
+import * as config from "../../config";
 
 const ProjectContent = ({ code, name, description }) => {
     const [ modificationName, setModificationName ] = useState("");
@@ -15,7 +16,7 @@ const ProjectContent = ({ code, name, description }) => {
     }
 
     const modifyProject = () => {
-        axios.patch(`http://localhost:6180/project/${code}`, {
+        axios.patch(config.BASE_URL + `/project/${code}`, {
             name: modificationName,
             description: modificationDescription,
         }, {
@@ -40,7 +41,7 @@ const ProjectContent = ({ code, name, description }) => {
     }
 
     const deleteProject = () => {
-        axios.delete(`http://localhost:6180/project/${code}`, {
+        axios.delete(config.BASE_URL + `/project/${code}`, {
             headers: {
                 Authorization: localStorage.getItem("accessToken"),
             },
