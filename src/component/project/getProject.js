@@ -1,8 +1,9 @@
 import axios from "axios";
+import * as config from "../../config";
 
 export const getProject = async () => {
     try {
-        return await axios.get("http://localhost:6180/project", {
+        return await axios.get(config.BASE_URL + "/project", {
             headers: {
                 Authorization: localStorage.getItem("accessToken"),
             },
