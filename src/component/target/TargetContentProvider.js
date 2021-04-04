@@ -14,6 +14,7 @@ const TargetContentProvider = () => {
             setTarget(prev =>
                 ({ ...prev, targets: prev.targets.concat(result.data.targets)})
             )
+            console.log(target);
         })
     })
 

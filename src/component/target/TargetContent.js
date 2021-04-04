@@ -12,10 +12,10 @@ const TargetContent = ({ token, nickname, name }) => {
                     <span className="target-content">{token}</span>
                 </div>
                 <div className="target-content-nickname-wrapper">
-                    <span className="target-content">{token}</span>
+                    <span className="target-content">{nickname}</span>
                 </div>
                 <div className="target-content-name-wrapper">
-                    <span className="target-content">{token}</span>
+                    <span className="target-content">{name}</span>
                 </div>
             </div>
         </div>
