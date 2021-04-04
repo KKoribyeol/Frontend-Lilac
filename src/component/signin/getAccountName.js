@@ -1,8 +1,9 @@
 import axios from "axios";
+import * as config from "../../config";
 
 export const getAccountName = async Authorization => {
     try {
-        return await axios.get("http://localhost:6180/account/name", {
+        return await axios.get(config.BASE_URL + "/account/name", {
             headers: {
                 Authorization: Authorization,
             },
