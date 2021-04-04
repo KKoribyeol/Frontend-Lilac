@@ -1,10 +1,10 @@
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom";
 import React, { useState } from 'react';
 import "./SignIn.css";
 import "../common/Common.css";
 import axios from "axios";
 import { getAccountName } from "./getAccountName";
-import {getProject} from "../project/getProject";
+import * as config from "../../config";
 
 const SignIn = () => {
     const history = useHistory();
@@ -19,7 +19,7 @@ const SignIn = () => {
     const submit = event => {
         event.preventDefault();
 
-        axios.post("http://localhost:6180/account/login", {
+        axios.post(config.BASE_URL + "/account/login", {
             accountId: id,
             accountPassword: password,
         }).then(event => {
