@@ -42,30 +42,6 @@
     margin-left: 18px;
 }
 
-.project-modification-image {
-    width: 15px;
-    height: 15px;
-    background: url("../../static/image/FeatureModification.png") 15px 15px / 100%;
-    margin-left: 10px;
-    margin-bottom: 12px;
-}
-
-.project-modification-image:hover {
-    cursor: pointer;
-}
-
-.project-deletion-image {
-    width: 15px;
-    height: 15px;
-    background: url("../../static/image/GarbageTong.png") 15px 15px / 100%;
-    margin-left: 10px;
-    margin-bottom: 12px;
-}
-
-.project-deletion-image:hover {
-    cursor: pointer;
-}
-
 .project-input-tag {
     width: 80%;
     height: 100%;
@@ -77,16 +53,4 @@
 
 .project-void {
     margin-left: 317px;
-}
-
-.project-cancel-image {
-    width: 15px;
-    height: 15px;
-    background: url("../../static/image/CancelLogo.png") 15px 15px / 100%;
-    margin-left: 10px;
-    margin-bottom: 12px;
-}
-
-.project-cancel-image:hover {
-    cursor: pointer;
 }

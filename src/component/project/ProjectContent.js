@@ -26,13 +26,28 @@ const ProjectContent = ({ code, name, description }) => {
         }).then(() => {
             window.location.reload()
         }).catch(error => {
-            switch (error.response.data.code) {
-                case "PROJECT_NOT_FOUND":
-                    alert(`잘못된 프로젝트입니다. [$code]`);
-                    break;
-                case "INVALID_REQUEST":
-                    alert(error.response.data.message);
-                    break;
+            switch (error.response.status) {
+                case 400:
+                    switch (error.response.data.code) {
+                        case "INVALID_REQUEST":
+                            alert('잘못된 요청입니다.' + error.response.data.message);
+                            break;
+                        case "INVALID_JSON":
+                            alert(error.response.data.message);
+                            break;
+                        default:
+                            alert(error.response.data.message);
+                            break;
+                    } break;
+                case 404:
+                    switch (error.response.data.code) {
+                        case "PROJECT_NOT_FOUND":
+                            alert(`잘못된 프로젝트입니다. [${code}]`);
+                            break;
+                        default:
+                            alert(error.response.data.message);
+                            break;
+                    } break;
                 default:
                     alert(error.response.data.message);
                     break;
@@ -48,14 +63,7 @@ const ProjectContent = ({ code, name, description }) => {
         }).then(() => {
             window.location.reload()
         }).catch(error => {
-            switch (error.response.status) {
-                case 404:
-                    alert(`잘못된 프로젝트입니다. [$code]`);
-                    break;
-                default:
-                    alert(error.message)
-                    break;
-            }
+            alert(error.response.data.message);
         })
     }
 
@@ -99,13 +107,13 @@ const ProjectContent = ({ code, name, description }) => {
             {
                 modificationMode ?
                     <>
-                        <div className="project-modification-image" onClick={modifyProject}/>
-                        <div className="project-cancel-image" onClick={switchModificationMode}/>
+                        <div className="content-modification-image" onClick={modifyProject}/>
+                        <div className="content-cancel-image" onClick={switchModificationMode}/>
                     </>
                     :
                     <>
-                        <div className="project-modification-image" onClick={switchModificationMode}/>
-                        <div className="project-deletion-image" onClick={deleteProject}/>
+                        <div className="content-modification-image" onClick={switchModificationMode}/>
+                        <div className="content-deletion-image" onClick={deleteProject}/>
                     </>
             }
         </div>
