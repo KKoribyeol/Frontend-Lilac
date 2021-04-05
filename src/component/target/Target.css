@@ -54,11 +54,9 @@
     margin-left: 18px;
 }
 
-.group-input-tag {
-    width: 80%;
-    height: 100%;
-    border: none;
-    outline: none;
+.target-content-description {
+    font-size: 6px;
+    font-weight: bold;
+    color: #B1B0B0;
     margin-left: 18px;
-    color: #000000;
 }
