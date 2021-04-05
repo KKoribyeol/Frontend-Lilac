@@ -58,17 +58,19 @@ const TargetContent = ({ token, nickname, name }) => {
     }
 
     const deleteTarget = () => {
-        axios.delete(BASE_URL + `/target`, {
-            tokens: [token],
-        }, {
+        axios.delete(BASE_URL + `/target/${token}`, {
             headers: {
-                Authorization: localStorage.getItem("Authorization"),
+                Authorization: localStorage.getItem("accessToken"),
                 projectCode: localStorage.getItem("projectCode"),
             }
         }).then(() => {
             window.location.reload();
         }).catch(error => {
-            alert(error.response.data.message);
+            if (error.response) {
+                alert(error.response.data.message);
+            } else {
+                alert("알 수 없는 오류");
+            }
         })
     }
 
@@ -113,7 +115,7 @@ const TargetContent = ({ token, nickname, name }) => {
                 modificationMode ?
                     <>
                         <div className="content-modification-image" onClick={modifyTarget}/>
-                        <div className="project-cancel-image" onClick={switchModificationMode}/>
+                        <div className="content-cancel-image" onClick={switchModificationMode}/>
                     </>
                     :
                     <>
