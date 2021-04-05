@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ProjectContent from "../project/ProjectContent";
-import ProjectInsertion from "../project/ProjectInsertion";
 import { getGroup } from "./getGroup";
 import GroupContent from "./GroupContent";
+import GroupInsertion from "./GroupInsertion";
 
 const GroupContentProvider = () => {
     const [ group, setGroup ] = useState({
@@ -23,7 +22,7 @@ const GroupContentProvider = () => {
                 group.groups.map(group =>
                     (<GroupContent key={group.name} name={group.name}/>))
             }
-            <ProjectInsertion/>
+            <GroupInsertion/>
         </div>
     );
 };
