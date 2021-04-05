@@ -151,6 +151,10 @@ html, body{
     flex-direction: row;
 }
 
+.hover-point:hover {
+    cursor: pointer;
+}
+
 .content-wrapper {
     width: 85%;
     height: 36px;
