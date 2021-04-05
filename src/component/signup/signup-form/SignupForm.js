@@ -1,13 +1,13 @@
 import "../../common/Common.css";
 import "./SignupForm.css";
 
-const SignupForm = ({ valueHandler, value, name, description }) => {
+const SignupForm = ({ valueHandler, value, name, description, type }) => {
     return (
         <div>
             <span className="box-name">{name}</span>
             <span className="box-description">{description}</span>
             <input
-                type="password"
+                type={type}
                 onChange={valueHandler}
                 value={value}
                 className="box-form"
