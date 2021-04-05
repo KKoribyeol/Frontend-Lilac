@@ -15,7 +15,7 @@ const TargetContentProvider = () => {
                 ({ ...prev, targets: prev.targets.concat(result.data.targets)})
             )
         })
-    })
+    }, []);
 
     return (
         <div className="feature-body-body">

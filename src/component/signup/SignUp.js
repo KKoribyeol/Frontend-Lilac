@@ -62,18 +62,21 @@ const SignUp = () => {
                             value={id}
                             name="ID"
                             description="8 ~ 20자, 영대소문자, 숫자 가능"
+                            type="text"
                         />
                         <SignupForm
                             valueHandler={handlePassword}
                             value={password}
                             name="Password"
                             description="8 ~ 20자, 영대소문자, 숫자, 특수문자 !@#$%^&* 가능"
+                            type="password"
                         />
                         <SignupForm
                             valueHandler={handleName}
                             value={name}
                             name="Name"
                             description="1 ~ 12자, 영대소문자, 한글, 띄워쓰기 가능"
+                            type="text"
                         />
                     </div>
 

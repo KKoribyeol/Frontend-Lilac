@@ -172,3 +172,39 @@ html, body{
 .content-insertion-image:hover {
     cursor: pointer;
 }
+
+.content-modification-image {
+    width: 15px;
+    height: 15px;
+    background: url("../../static/image/FeatureModification.png") 15px 15px / 100%;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.content-modification-image:hover {
+    cursor: pointer;
+}
+
+.content-deletion-image {
+    width: 15px;
+    height: 15px;
+    background: url("../../static/image/GarbageTong.png") 15px 15px / 100%;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.content-deletion-image:hover {
+    cursor: pointer;
+}
+
+.content-cancel-image {
+    width: 15px;
+    height: 15px;
+    background: url("../../static/image/CancelLogo.png") 15px 15px / 100%;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+.content-cancel-image:hover {
+    cursor: pointer;
+}

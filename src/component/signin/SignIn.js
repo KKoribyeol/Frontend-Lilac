@@ -34,17 +34,22 @@ const SignIn = () => {
 
             history.push("/project");
         }).catch(error => {
-            console.log(error)
-            switch (error.response.status) {
-                case 400:
-                    setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
-                    break;
-                case 404:
-                    setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
-                    break;
-                default:
-                    setProblemMessage(error.response.message);
-                    break;
+            if (error.response) {
+                switch (error.response.status) {
+                    case 400:
+                        setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
+                        break;
+                    case 404:
+                        setProblemMessage("아이디 또는 비밀번호가 일치하지 않습니다.");
+                        break;
+                    default:
+                        setProblemMessage(error.response.message);
+                        break;
+                }
+            } else if (error.request) {
+                setProblemMessage("서버에서 응답을 받는데 실패하였습니다.");
+            } else {
+                setProblemMessage("요청에 실패하였습니다.");
             }
         })
     }
