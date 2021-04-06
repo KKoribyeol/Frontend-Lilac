@@ -25,7 +25,7 @@ const TargetInsertion = () => {
                 Authorization: localStorage.getItem("accessToken"),
                 projectCode: localStorage.getItem("projectCode"),
             },
-        }).then(result => {
+        }).then(() => {
             window.location.reload();
         }).catch(error => {
             switch (error.response.data.code) {
