@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import "./Target.css"
-import "../common/Common.css"
+import "./Template.css"
 import axios from "axios";
 import {BASE_URL} from "../../config";
 
-const TargetContent = ({ token, nickname, name }) => {
-    const [ modificationNickname, setModificationNickname ] = useState("");
-    const [ modificationName, setModificationName ] = useState("");
+const TemplateContent = ({ id, title, body }) => {
+    const [ modificationTitle, setModificationTitle ] = useState("");
+    const [ modificationBody, setModificationBody ] = useState("");
     const [ modificationMode, setModificationMode ] = useState(false);
 
-    const handleNickname = nickname => setModificationNickname(nickname.currentTarget.value);
-    const handleName = name => setModificationName(name.currentTarget.value);
+    const handleTitle = title => setModificationTitle(title.currentTarget.value);
+    const handleBody = body => setModificationBody(body.currentTarget.value);
 
     const switchModificationMode = () => {
         setModificationMode(!modificationMode);
     }
 
-    const modifyTarget = () => {
-        axios.patch(BASE_URL + `/target/${token}`, {
-            nickname: modificationNickname,
-            name: modificationName,
+    const modifyTemplate = () => {
+        axios.patch(BASE_URL + `/template/${id}`, {
+            title: modificationTitle,
+            body: modificationBody,
         }, {
             headers: {
                 Authorization: localStorage.getItem("accessToken"),
@@ -43,8 +42,8 @@ const TargetContent = ({ token, nickname, name }) => {
                     } break;
                 case 404:
                     switch (error.response.data.code) {
-                        case "TARGET_NOT_FOUND":
-                            alert(`잘못된 타겟입니다.. [${token}]`);
+                        case "TEMPLATE_NOT_FOUND":
+                            alert(`잘못된 템플릿입니다. [${id}]`);
                             break;
                         default:
                             alert(error.response.data.message);
@@ -57,8 +56,8 @@ const TargetContent = ({ token, nickname, name }) => {
         })
     }
 
-    const deleteTarget = () => {
-        axios.delete(BASE_URL + `/target/${token}`, {
+    const deleteTemplate = () => {
+        axios.delete(BASE_URL + `/template/${id}`, {
             headers: {
                 Authorization: localStorage.getItem("accessToken"),
                 projectCode: localStorage.getItem("projectCode"),
@@ -77,36 +76,36 @@ const TargetContent = ({ token, nickname, name }) => {
     return (
         <div className="content-wrapper-wrapper">
             <div className="content-wrapper">
-                <div className="target-content-token-wrapper target-void">
-                    <span className="target-content">{token}</span>
+                <div className="template-content-id-wrapper template-void">
+                    <span className="template-content">{id}</span>
                 </div>
                 {
                     modificationMode ?
                         <>
-                            <div className="target-content-nickname-wrapper">
+                            <div className="template-content-title-wrapper template-void">
                                 <input
                                     type="text"
-                                    onChange={handleNickname}
-                                    value={modificationNickname}
-                                    className="target-input-tag"
+                                    onChange={handleTitle}
+                                    value={modificationTitle}
+                                    className="template-input-tag"
                                 />
                             </div>
-                            <div className="target-content-name-wrapper">
+                            <div className="template-content-body-wrapper template-void">
                                 <input
                                     type="text"
-                                    onChange={handleName}
-                                    value={modificationName}
-                                    className="target-input-tag"
+                                    onChange={handleBody}
+                                    value={modificationBody}
+                                    className="template-input-tag"
                                 />
                             </div>
                         </>
                         :
                         <>
-                            <div className="target-content-nickname-wrapper">
-                                <span className="target-content">{nickname}</span>
+                            <div className="template-content-title-wrapper template-void">
+                                <span className="template-content">{title}</span>
                             </div>
-                            <div className="target-content-name-wrapper">
-                                <span className="target-content">{name}</span>
+                            <div className="template-content-body-wrapper template-void">
+                                <span className="template-content">{body}</span>
                             </div>
                         </>
                 }
@@ -114,17 +113,17 @@ const TargetContent = ({ token, nickname, name }) => {
             {
                 modificationMode ?
                     <>
-                        <div className="content-modification-image" onClick={modifyTarget}/>
+                        <div className="content-modification-image" onClick={modifyTemplate}/>
                         <div className="content-cancel-image" onClick={switchModificationMode}/>
                     </>
                     :
                     <>
                         <div className="content-modification-image" onClick={switchModificationMode}/>
-                        <div className="content-deletion-image" onClick={deleteTarget}/>
+                        <div className="content-deletion-image" onClick={deleteTemplate}/>
                     </>
             }
         </div>
     );
-};
+}
 
-export default TargetContent;
+export default TemplateContent;

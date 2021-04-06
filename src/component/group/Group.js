@@ -1,16 +1,16 @@
 import React from 'react';
 import "./Group.css"
 import FeatureBackground from "../common/feature/FeatureBackground";
-import ProjectHeader from "../project/ProjectHeader";
-import ProjectContentProvider from "../project/ProjectContentProvider";
+import GroupContentProvider from "./GroupContentProvider";
+import GroupHeader from "./GroupHeader";
 
 const Group = () => {
     return (
         <>
             <FeatureBackground
                 title="Group"
-                FeatureHeader={ProjectHeader}
-                FeatureContentProvider={ProjectContentProvider}
+                FeatureHeader={GroupHeader}
+                FeatureContentProvider={GroupContentProvider}
             />
         </>
     );
