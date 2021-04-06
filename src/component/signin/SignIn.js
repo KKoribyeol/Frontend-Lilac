@@ -25,6 +25,7 @@ const SignIn = () => {
         }).then(event => {
             const { accessToken, refreshToken } = event.data;
 
+            localStorage.clear();
             localStorage.setItem("accessToken", accessToken);
             localStorage.setItem("refreshToken", refreshToken);
 
