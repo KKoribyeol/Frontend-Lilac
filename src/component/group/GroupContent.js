@@ -105,7 +105,8 @@ const GroupContent = ({ name }) => {
             }
         }).then(() => {
             window.location.reload();
-        }).catch(() => {
+        }).catch((error) => {
+            console.log(error.response)
             alert("타겟을 그룹에서 해제하는데 실패하였습니다.");
         })
     }
