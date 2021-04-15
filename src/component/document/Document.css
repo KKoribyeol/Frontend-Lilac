@@ -1,0 +1,47 @@
+.document-body {
+    width: 1270px;
+    height: 620px;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E4E8;
+    margin-left: 126px;
+    margin-top: 20px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    -ms-overflow-style: none;
+    overflow: scroll;
+}
+
+.document-body::-webkit-scrollbar{
+    display:none;
+}
+
+.document-big-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #161B22;
+    margin-bottom: 25px;
+}
+
+.document-small-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #707070;
+    margin-bottom: 15px;
+}
+
+.document-normal-text {
+    font-size: 12px;
+    font-weight: normal;
+    color: #161B22;
+    margin-bottom: 5px;
+}
+
+.document-request-response-background {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F8FA;
+    padding: 10px;
+}
