@@ -19,7 +19,7 @@ const SignIn = () => {
     const submit = event => {
         event.preventDefault();
 
-        axios.post(config.BASE_URL + "/account/login", {
+        axios.post(config.BASE_URL + "/auth", {
             accountId: id,
             accountPassword: password,
         }).then(event => {
