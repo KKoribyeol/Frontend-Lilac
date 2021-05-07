@@ -39,25 +39,25 @@ public
     ㄴrobots.txt
 src
     ㄴcomponent
-        ㄴcommon
-            ㄴfeature
-            ㄴheader
-                ㄴnavigation
-            ㄴside-bar
-                ㄴproject
-        ㄴdocument
-        ㄴgroup
-        ㄴmain
-        ㄴproject
-        ㄴsignin
-        ㄴsignup
-            ㄴsignup-form
-        ㄴtarget
-        ㄴtemplate
+    |   ㄴcommon
+    |   |   ㄴfeature
+    |   |   ㄴheader
+    |   |   |   ㄴnavigation
+    |   |   ㄴside-bar
+    |   |       ㄴproject
+    |   ㄴdocument
+    |   ㄴgroup
+    |   ㄴmain
+    |   ㄴproject
+    |   ㄴsignin
+    |   ㄴsignup
+    |   |   ㄴsignup-form
+    |   ㄴtarget
+    |   ㄴtemplate
     ㄴrouter
     ㄴstatic
-        ㄴfont
-        ㄴimage
+    |   ㄴfont
+    |   ㄴimage
     ㄴApp.js
     ㄴconfig.js
     ㄴindex.js
