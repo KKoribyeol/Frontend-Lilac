@@ -91,7 +91,7 @@ const Document = () => {
                 <span className="document-normal-text">9. histories.completedAt: 푸시 알림이 정상적으로 성공한 시간 (Nullable)</span>
                 <span className="document-normal-text">10. isLastPage: 이 페이지가 마지막 페이지이면 true, 아니면 false</span>
                 <span className="document-small-title">2. 푸시 기록 자세히 조회</span>
-                <span className="document-normal-text">GET /history/{historyId}?page={"pageNumber"}&size={"pageSize"}</span>
+                <span className="document-normal-text">GET /history/{"{"}historyId{"}"}?page={"pageNumber"}&size={"pageSize"}</span>
                 <div className="document-request-response-background">
                     <span className="document-small-title">Request</span>
                     <span className="document-normal-text">{"{"}</span>
